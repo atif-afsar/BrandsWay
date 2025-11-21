@@ -1781,7 +1781,7 @@ header i {
 
 .package-card {
   background: var(--white);
-  padding: 30px;
+  padding: 31px;
   border-radius: var(--radius);
   box-shadow: 0 5px 20px var(--shadow);
   transition: transform 0.3s ease, background 0.3s ease;
@@ -1854,8 +1854,16 @@ header i {
   color: var(--dark-gray);
 }
 
+.package-card .btn-1 {
+  margin: 153px;
+  color: var(--white);
+  background: linear-gradient(120deg, #ED5240, #ed7321, #ef771c);
+  border-color: var(--orange);
+}
+
 .package-card .btn-primary {
   max-width: 200px;
+  /* margin-top: 100px; */
   padding: 12px 24px;
   font-size: 1.6rem;
   font-weight: var(--fw-medium);
