@@ -1,0 +1,86 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# PHP & Composer
+vendor/
+composer.lock
+composer.phar
+
+# PHP Configuration & Sensitive Data
+config.php
+settings.php
+database.php
+db_config.php
+config/database.php
+config/config.php
+
+# Logs
+error_log
+logs/
+*.log
+
+# OS Files
+Thumbs.db
+.DS_Store
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Configuration with Secrets
+config/secrets.json
+.config.local
+config.php.local
+
+# Build & Dependency Directories
+dist/
+build/
+tmp/
+temp/
+
+# Cache
+.cache/
+cache/
+
+# Private Keys
+*.pem
+*.key
+*.private
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# PHP Session & Upload Files
+sessions/
+uploads/
+temp/
+tmp/
+images
+
+# PHPMailer Sensitive Data
+PHPMailer/config.php
+PHPMailer/.env
+mail_config.php
+PHPMailer-MASTER
+
+# API Keys & Credentials
+api_keys.php
+credentials.php
+secrets.php
+process-form.php
+form_*.php
+mail_*.php
+
