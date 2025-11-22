@@ -5798,6 +5798,13 @@ body {
   border-radius: 16px 16px 0 0;
 }
 
+.bw-card-banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
 /* Gradient Presets */
 .gradient-1 { background: linear-gradient(135deg, #ff7a00, #ffd6b0); }
 .gradient-2 { background: linear-gradient(135deg, #7dc9c1, #b5ffe1); }
@@ -5811,11 +5818,13 @@ body {
 }
 
 .bw-card-title {
-  font-size: 1.5rem;
-  color: var(--black);
+  font-size: 2rem;
+  /* background: #000; */
+  /* color: var(--black); */
   font-weight: 700;
   margin-top: 10px;
 }
+
 
 .bw-card-text {
   color: var(--gray);
