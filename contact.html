@@ -141,36 +141,42 @@
             <p class="section-text mb-4">
               Ready to elevate your brand? Contact us for tailored digital marketing solutions.
             </p>
-            <form action="process-form.php" method="POST" class="contact-form" id="contactForm">
-              <input type="hidden" name="form_type" value="contact">
-              <input type="text" name="_gotcha" style="display:none">
-              <div class="mb-3">
-                <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" name="email" required
-                  placeholder="Enter your email">
-                <div id="email-error" class="invalid-feedback">Please enter a valid email.</div>
-              </div>
-              <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
-                <div id="phone-error" class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="5" required
-                  placeholder="Tell us about your project"></textarea>
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="consent" name="consent" required>
-                <label class="form-check-label" for="consent">I agree to the <a href="privacy.html"
-                    class="d-inline text-primary" target="_blank">Privacy Policy</a></label>
-              </div>
-              <button type="submit" class="btn btn-primary w-100">Send Message</button>
-            </form>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+                  
+                  <input type="hidden" name="access_key" value="81c73b98-8656-4669-a458-20a031ac4141">
+
+                  <input type="hidden" name="subject" value="New Contact Form Submission">
+                  <input type="hidden" name="from_name" value="BrandsWay Contact Form">
+
+                  <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                  <!-- Honeypot -->
+                  <input type="text" name="_gotcha" style="display:none">
+
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Tell us about your project"></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary w-100">Send Message</button>
+
+              </form>
+
           </div>
         </div>
       </div>

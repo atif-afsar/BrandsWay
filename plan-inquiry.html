@@ -149,7 +149,7 @@
                 <li><strong>Website Services:</strong> None</li>
                 <li><strong>Extras:</strong> Festival Posts,<br> Event Based Posts</li>
               </ul>
-              <a href="plan-inquiry.html" class="btn-1 btn-primary d-block mx-auto">Choose Plan</a>
+              <a href="#plan-inquiry" class="btn-1 btn-primary d-block mx-auto">Choose Plan</a>
             </div>
           </div>
           <!-- Standard Plan -->
@@ -174,7 +174,7 @@
                 <li><strong>Website Services:</strong> None</li>
                 <li><strong>Extras:</strong> Includes Podcast Editing</li>
               </ul>
-              <a href="plan-inquiry.html" class="btn btn-primary d-block mx-auto">Choose Plan</a>
+              <a href="#plan-inquiry" class="btn btn-primary d-block mx-auto">Choose Plan</a>
             </div>
           </div>
           <!-- Premium Plan -->
@@ -198,7 +198,7 @@
                 <li><strong>Website Services:</strong> User-Friendly Website + SEO + Ranking</li>
                 <li><strong>Extras:</strong> Advanced Content Strategy</li>
               </ul>
-              <a href="plan-inquiry.html" class="btn btn-primary d-block mx-auto">Choose Plan</a>
+              <a href="#plan-inquiry" class="btn btn-primary d-block mx-auto">Choose Plan</a>
             </div>
           </div>
         </div>
@@ -219,8 +219,9 @@
             <p class="section-text mb-4">
               Select a plan or customize your own to start your digital marketing journey with BrandsWay.
             </p>
-            <form action="process-form.php" method="POST" class="plan-inquiry-form" id="planInquiryForm">
-              <input type="hidden" name="form_type" value="plan_inquiry">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">               
+                  <input type="hidden" name="access_key" value="81c73b98-8656-4669-a458-20a031ac4141">
+                  <input type="hidden" name="subject" value="New Contact Form Submission">
               <input type="text" name="_gotcha" style="display:none">
               <div class="mb-3">
                 <strong><label for="name" class="form-label">Full Name</label></strong>
@@ -238,7 +239,7 @@
                 <div id="phone-error" class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
               </div>
               <div class="mb-3">
-                <strong><label for="package" class="form-label">Select Package</label></strong>
+                <strong><label for="package"  class="form-label">Select Package</label></strong>
                 <select class="form-select" id="package" name="package" required>
                   <option value="" disabled selected>Choose a plan</option>
                   <option value="Basic">Basic Plan (₹20,000)</option>

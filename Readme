@@ -1,0 +1,10 @@
+// bele txvt ahsl hcml
+
+//  $mail->isSMTP();
+//         $mail->Host = 'smtp.gmail.com';
+//         $mail->SMTPAuth = true;
+//         $mail->Username = 'amantariq9368@gmail.com';
+//         $mail->Password = 'bele txvt ahsl hcml';
+//         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+//         $mail->Port = 587;
+//         $mail->CharSet = 'UTF-8';
