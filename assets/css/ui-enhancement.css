@@ -1,0 +1,702 @@
+/* ================================================================
+   MODERN PREMIUM UI ENHANCEMENTS
+   Orange (#ff6a00), White, Black Theme
+   Enhanced Buttons, Cards, Images, Animations
+   ================================================================ */
+
+/* ================================================================
+   1. ANIMATIONS LIBRARY
+   ================================================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 106, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 106, 0, 0.6);
+  }
+}
+
+/* ================================================================
+   2. ENHANCED BUTTONS - MODERN & BOLD
+   ================================================================ */
+
+.btn {
+  font-weight: 700 !important;
+  letter-spacing: 0.5px;
+  border-radius: 8px !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  padding: 12px 28px !important;
+  font-size: 14px !important;
+  text-transform: uppercase;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+/* Primary Button Enhancement */
+.btn-primary {
+  background: linear-gradient(135deg, #ff6a00 0%, #ff8a2e 100%) !important;
+  color: white !important;
+  border: none !important;
+  font-weight: 700;
+  box-shadow: 0 8px 25px rgba(255, 106, 0, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ff8a2e 0%, #ff6a00 100%) !important;
+  box-shadow: 0 12px 35px rgba(255, 106, 0, 0.5) !important;
+  transform: translateY(-3px);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+/* Outline Button Enhancement */
+.btn-outline {
+  border: 2px solid #ff6a00 !important;
+  color: #ff6a00 !important;
+  background: transparent !important;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-outline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #ff6a00;
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+.btn-outline:hover {
+  color: white !important;
+  box-shadow: 0 8px 25px rgba(255, 106, 0, 0.4);
+  border-color: #ff6a00 !important;
+}
+
+.btn-outline:hover::after {
+  left: 0;
+}
+
+/* Secondary Button Enhancement */
+.btn-secondary {
+  background: rgba(255, 106, 0, 0.1) !important;
+  color: #ff6a00 !important;
+  border: 2px solid rgba(255, 106, 0, 0.3) !important;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #ff6a00 !important;
+  color: white !important;
+  border-color: #ff6a00 !important;
+  box-shadow: 0 8px 25px rgba(255, 106, 0, 0.4);
+}
+
+/* ================================================================
+   3. ENHANCED IMAGE PRESENTATION
+   ================================================================ */
+
+img {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.img-fluid {
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.img-fluid:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 20px 50px rgba(255, 106, 0, 0.25);
+}
+
+/* Hero Image */
+.hero-image {
+  border-radius: 16px;
+  box-shadow: 0 15px 50px rgba(255, 106, 0, 0.2);
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.hero-image:hover {
+  transform: scale(1.08) translateY(-8px);
+  box-shadow: 0 25px 60px rgba(255, 106, 0, 0.35);
+}
+
+/* Blog and Project Images */
+.img-cover {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.img-cover:hover {
+  box-shadow: 0 12px 40px rgba(255, 106, 0, 0.25);
+}
+
+/* Card Banner Images */
+.card-banner img {
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+.card-banner:hover img {
+  transform: scale(1.12);
+}
+
+/* ================================================================
+   4. ENHANCED CARDS & SECTIONS
+   ================================================================ */
+
+/* Service Cards */
+.service-card {
+  background: white;
+  border: 1px solid rgba(255, 106, 0, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6a00, #ff8a2e);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover {
+  border-color: #ff6a00;
+  box-shadow: 0 15px 40px rgba(255, 106, 0, 0.2);
+  transform: translateY(-8px);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Package Cards */
+.package-card {
+  background: white;
+  border: 2px solid rgba(255, 106, 0, 0.1);
+  border-radius: 14px;
+  padding: 35px 25px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.package-card::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  right: -100%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 106, 0, 0.05) 0%, transparent 70%);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.package-card:hover {
+  border-color: #ff6a00;
+  box-shadow: 0 20px 50px rgba(255, 106, 0, 0.25);
+  transform: translateY(-10px);
+}
+
+.package-card:hover::after {
+  top: 0;
+  right: 0;
+}
+
+/* Blog Cards */
+.blog-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid rgba(255, 106, 0, 0.05);
+}
+
+.blog-card:hover {
+  box-shadow: 0 15px 40px rgba(255, 106, 0, 0.2);
+  transform: translateY(-8px);
+  border-color: #ff6a00;
+}
+
+/* Project Cards */
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid rgba(255, 106, 0, 0.08);
+}
+
+.project-card:hover {
+  box-shadow: 0 18px 50px rgba(255, 106, 0, 0.25);
+  transform: translateY(-10px);
+}
+
+/* Team Cards */
+.team-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 106, 0, 0.08);
+  overflow: hidden;
+}
+
+.team-card:hover {
+  box-shadow: 0 15px 40px rgba(255, 106, 0, 0.2);
+  border-color: #ff6a00;
+  transform: translateY(-8px);
+}
+
+/* ================================================================
+   5. SECTION ENHANCEMENTS
+   ================================================================ */
+
+.section {
+  position: relative;
+}
+
+.section-title {
+  font-weight: 700;
+  /* font-size: 2.5rem; */
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  color: #666;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+
+/* ================================================================
+   6. HEADER & NAVIGATION ENHANCEMENTS
+   ================================================================ */
+
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 106, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.header.active {
+  background: white;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff6a00;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #ff6a00 !important;
+}
+
+/* ================================================================
+   7. HERO SECTION ENHANCEMENTS
+   ================================================================ */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0 60px;
+}
+
+.hero-heading {
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 1.3;
+  color: #1a1a1a;
+  letter-spacing: -1px;
+  animation: fadeInUp 0.8s ease-out;
+  margin-bottom: 20px;
+}
+
+.hero-paragraph {
+  font-size: 1.3rem;
+  color: #666;
+  font-weight: 500;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+  line-height: 1.6;
+}
+
+.hero-btn {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.touch {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.touch:hover {
+  transform: translateY(-3px);
+}
+
+/* ================================================================
+   8. TEXT ANIMATIONS & EFFECTS
+   ================================================================ */
+
+.gradient-text {
+  background: linear-gradient(135deg, #ff6a00, #ff8a2e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+
+.gradient-text:hover {
+  transform: scale(1.02);
+}
+
+.text-orange {
+  color: #ff6a00 !important;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #ff6a00;
+  font-weight: 800;
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6a00, transparent);
+  border-radius: 2px;
+}
+
+/* ================================================================
+   9. FORM ENHANCEMENTS
+   ================================================================ */
+
+.form-control,
+.form-select {
+  border: 2px solid rgba(255, 106, 0, 0.15);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: rgba(255, 106, 0, 0.02);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #ff6a00;
+  box-shadow: 0 0 0 4px rgba(255, 106, 0, 0.1);
+  background: white;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  margin-bottom: 8px;
+}
+
+/* ================================================================
+   10. PARALLAX & SCROLL ANIMATIONS
+   ================================================================ */
+
+[data-aos] {
+  opacity: 0;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-animate-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate-left.animate-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ================================================================
+   11. FOOTER ENHANCEMENTS
+   ================================================================ */
+
+.footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border-top: 2px solid #ff6a00;
+  padding: 60px 0 20px;
+}
+
+.footer-link {
+  color: #ccc;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.footer-link:hover {
+  color: #ff6a00;
+  transform: translateX(5px);
+}
+
+.footer-list-title {
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.social-link {
+  background: rgba(255, 106, 0, 0.1);
+  color: #ff6a00;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid #ff6a00;
+}
+
+.social-link:hover {
+  background: #ff6a00;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 106, 0, 0.4);
+}
+
+/* ================================================================
+   12. RESPONSIVE ENHANCEMENTS
+   ================================================================ */
+
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.2rem;
+  }
+
+  .hero-paragraph {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .btn {
+    padding: 10px 20px !important;
+    font-size: 13px !important;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .package-card {
+    padding: 25px 15px;
+  }
+}
+
+/* ================================================================
+   13. SPECIAL HOVER EFFECTS
+   ================================================================ */
+
+.stat:hover {
+  transform: scale(1.08);
+}
+
+.stat {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Glow Effect for Interactive Elements */
+.btn-primary:focus,
+.btn-outline:focus {
+  box-shadow: 0 0 0 4px rgba(255, 106, 0, 0.2);
+}
+
+/* ================================================================
+   14. SMOOTH TRANSITIONS
+   ================================================================ */
+
+* {
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ================================================================
+   15. CARD CONTENT ENHANCEMENTS
+   ================================================================ */
+
+.card-title {
+  font-weight: 700;
+  padding: 12px;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+  font-size: 1.7rem;
+  letter-spacing: -0.3px;
+}
+
+.card-text {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+.service-card:hover .card-title {
+  color: #ff6a00;
+}
+
+.blog-card:hover .card-title {
+  color: #ff6a00;
+}
