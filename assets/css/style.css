@@ -1501,6 +1501,7 @@ header i {
 .section.project {
   position: relative;
   z-index: 2;
+
   /* Above hero, below subsequent sections */
   overflow: hidden;
   background: transparent;
@@ -2524,6 +2525,7 @@ main {
 /* ========== Image Hover Animation ========== */
 .webProject img {
   width: 100%;
+  height: fit-content;
   border-radius: 14px;
   transition: transform 0.6s ease, box-shadow 0.4s ease, filter 0.4s ease;
 }
